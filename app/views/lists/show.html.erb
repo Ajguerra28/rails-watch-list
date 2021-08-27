@@ -1,5 +1,7 @@
 <h1>Welcome to my <%= @list.name %> list!</h1>
 
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
 <% @list.movies.each do |movie| %>
  <h2><%= movie.title %></h2>
  <p><%= movie.overview %></p>
